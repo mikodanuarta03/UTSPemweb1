@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Wisata</title>
+    <style>
+           fieldset {
+            width: 500px;
+        }
+
+         label, input, textarea, select {
+            display: inline-block;
+            margin-bottom: 5px;
+            vertical-align: top;
+         }
+        
+         label {
+            width: 150px;
+        }
+
+        #submit{
+            margin-left: 40px;
+        }
+        </style>
+
+</head>
+<body>
+    <fieldset>
+    <legend>From Registrasi Tempat Rekresasi Wisata</legend> 
+    <form action="process_registration.php" method="post">
+        <label for="nama">Nama Tempat Wisata:</label>
+        <input type="text" id="nama" name="nama" required>
+        <br>
+        <label for="jenis">Jenis Wisata:</label>
+        <select>
+            <option value="1">Taman</option>
+            <option value="2">Laut</option>
+            <option value="3">Gunung</option>
+        </select>
+        <br>
+        <label for="Deskripsi">Deskripsi Wisata:</label>
+        <textarea name="Instructions" id="id_instructions" cols="30" rows="5"
+        placeholder="Deskripsi Wisata"></textarea>
+        <br>
+        <label for="tujuan">Kontak Person:</label>
+        <input type="text" id="tujuan" name="tujuan" required><br>
+
+        <label for="no_hp">NO HP/Telepon:</label>
+        <input type="tel" name="no_hp" id="no_hp"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email"><br>
+
+        <label for="alamat_web">Alamat Web:</label>
+        <input type="url" name="alamat_web" id="alamat_web"><br>
+
+        <label for="alamat_lengkap">Alamat Lengkap:</label>
+        <input type="text" name="alamat_lengkap" id="alamat_lengkap"><br>
+
+
+        <label for="latitude">Latitude, Longitude:</label>
+        <input type="text" name="latitude" id="latitude"><br>
+
+        <input type="submit" value="Daftar" id="submit">
+        <input type="reset" value="Reset">
+    </form>
+    </fieldset>
+</body>
+</html>
